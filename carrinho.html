@@ -1,95 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Carrinho - Maria dos Bolos</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{
-    background:#1c1c1c;
-    color:#f5f5f5;
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-    min-height:100vh;
-    padding:50px 20px;
-}
-.container{
-    width:100%;
-    max-width:700px;
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(15px);
-    border-radius:20px;
-    padding:30px;
-    box-shadow:0 0 40px rgba(0,0,0,0.6);
-}
-h1{
-    text-align:center;
-    font-size:32px;
-    color:#d4af37;
-    margin-bottom:25px;
-}
-.lista-itens{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    margin-bottom:20px;
-}
-.item{
-    background:#2b2b2b;
-    padding:15px 20px;
-    border-radius:15px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    box-shadow:0 5px 15px rgba(0,0,0,0.5);
-    transition:0.3s;
-}
-.item:hover{transform:translateY(-3px);}
-.item span{font-weight:500;}
-button{
-    padding:8px 15px;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-    font-weight:600;
-    transition:0.3s;
-}
-.remover{background:#ff4d4d;color:white;}
-.remover:hover{background:#ff1a1a;}
-.acoes{
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-top:20px;
-}
-.btn-principal{
-    background:#d4af37;
-    color:black;
-    flex:1;
-    text-align:center;
-    padding:12px 15px;
-    border-radius:12px;
-    cursor:pointer;
-    font-weight:600;
-}
-.btn-principal:hover{background:#f1c94c;}
-.total{
-    margin-top:20px;
-    font-size:22px;
-    font-weight:600;
-    text-align:right;
-    color:#d4af37;
-}
-.vazio{
-    text-align:center;
-    opacity:0.6;
-    margin:20px 0;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -101,8 +16,8 @@ button{
 <div class="acoes">
     <button class="btn-principal" onclick="finalizar()">Finalizar no WhatsApp</button>
     <button class="btn-principal" onclick="limpar()">Limpar</button>
-    <a href="index.html"><button>voltar</button></a>
-
+    <a href="index.html"><button>Voltar</button></a>
+</div>
 </div>
 
 <script>
@@ -156,13 +71,9 @@ function finalizar(){
     window.open("https://wa.me/5551993702954?text="+encodeURIComponent(mensagem));
 }
 
-// Inicializa
 atualizarCarrinho();
 </script>
 
 </body>
 </html>
-
-
-      
 
