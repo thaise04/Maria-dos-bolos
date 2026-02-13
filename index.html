@@ -1,138 +1,11 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
- <link rel="shortcut icon" type="image/png" href="./IMG/ICON.ico">   
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maria dos Bolos</title>
-<style>
-/* Reset e fontes */
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins', sans-serif;}
-body{
-    background: #1c1c1c;
-    color: #f5f5f5;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:flex-start;
-    min-height:100vh;
-    padding:50px 20px;
-}
-header{
-    font-size:36px;
-    font-weight:700;
-    color:#d4af37;
-    margin-bottom:40px;
-    text-align:center;
-}
-
-/* Contador do carrinho */
-.carrinho-topo{
-    position:fixed;
-    top:20px;
-    right:20px;
-    background:#d4af37;
-    color:black;
-    padding:12px 20px;
-    border-radius:25px;
-    font-weight:bold;
-    font-size:18px;
-    cursor:pointer;
-    z-index:1000;
-    box-shadow:0 0 10px rgba(0,0,0,0.5);
-}
-
-/* WhatsApp fixo */
-.whatsapp-fixo{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:28px;
-    cursor:pointer;
-    box-shadow:0 0 15px rgba(0,0,0,0.4);
-}
-.whatsapp-fixo:hover{transform:scale(1.1);}
-
-/* Grid de produtos */
-.produtos{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:30px;
-    width:100%;
-    max-width:1000px;
-    justify-items:center;
-}
-
-/* Card moderno com imagem */
-.card{
-    background:#2b2b2b;
-    padding:25px;
-    border-radius:20px;
-    width:100%;
-    text-align:center;
-    box-shadow:0 8px 20px rgba(0,0,0,0.5);
-    transition:transform 0.3s, box-shadow 0.3s;
-}
-.card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 15px 25px rgba(212,175,55,0.5);
-}
-.card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-    border-radius:15px;
-    margin-bottom:15px;
-}
-.card h3{
-    font-size:22px;
-    margin-bottom:15px;
-    color:#d4af37;
-}
-.card button{
-    background:#d4af37;
-    color:black;
-    border:none;
-    padding:12px 20px;
-    margin:5px;
-    border-radius:12px;
-    cursor:pointer;
-    font-weight:600;
-    transition:0.3s;
-}
-.card button:hover{opacity:0.85;}
-
-/* Toast de aviso */
-.toast {
-    position: fixed;
-    top: 80px;
-    right: 20px;
-    background: #d4af37;
-    color: black;
-    padding: 12px 20px;
-    border-radius: 12px;
-    font-weight: bold;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 0.5s, transform 0.5s;
-    z-index: 2000;
-}
-.toast.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria dos Bolos</title>
+    <link rel="shortcut icon" type="image/png" href="./IMG/ICON.ico">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -143,25 +16,25 @@ header{
 
 <div class="produtos">
     <div class="card">
-        <img src=./"imagem/nutella.jpg" alt="Nutella">
+        <img src="./IMG/nutella.jpg" alt="Nutella">
         <h3>🍫 Nutella</h3>
         <button onclick="addItem('Nutella Pequeno',5)">Pequeno R$5</button>
         <button onclick="addItem('Nutella Grande',7)">Grande R$7</button>
     </div>
     <div class="card">
-        <img src=./"imagem/brigadeiro.jpg" alt="Brigadeiro">
+        <img src="./IMG/brigadeiro.jpg" alt="Brigadeiro">
         <h3>🍮 Brigadeiro</h3>
         <button onclick="addItem('Brigadeiro Pequeno',5)">Pequeno R$5</button>
         <button onclick="addItem('Brigadeiro Grande',7)">Grande R$7</button>
     </div>
     <div class="card">
-        <img src="./imagem/bolo_chocolate.jpg" alt="Bolo de Chocolate">
+        <img src="./IMG/bolo_chocolate.jpg" alt="Bolo de Chocolate">
         <h3>🍰 Bolo de Chocolate</h3>
         <button onclick="addItem('Bolo Pequeno',10)">Pequeno R$10</button>
         <button onclick="addItem('Bolo Grande',15)">Grande R$15</button>
     </div>
     <div class="card">
-        <img src="./imagem/cupcake.jpg" alt="Cupcake">
+        <img src="./IMG/cupcake.jpg" alt="Cupcake">
         <h3>🧁 Cupcake</h3>
         <button onclick="addItem('Cupcake Pequeno',6)">Pequeno R$6</button>
         <button onclick="addItem('Cupcake Grande',9)">Grande R$9</button>
@@ -199,8 +72,4 @@ atualizarContador();
 
 </body>
 </html>
-
-    
-
-
 
