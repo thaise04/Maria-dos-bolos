@@ -1,7 +1,9 @@
 
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+ <link rel="shortcut icon" type="image/png" href="./IMG/ICON.ico">   
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maria dos Bolos</title>
@@ -71,7 +73,7 @@ header{
     justify-items:center;
 }
 
-/* Card moderno */
+/* Card moderno com imagem */
 .card{
     background:#2b2b2b;
     padding:25px;
@@ -85,9 +87,16 @@ header{
     transform:translateY(-5px);
     box-shadow:0 15px 25px rgba(212,175,55,0.5);
 }
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-bottom:15px;
+}
 .card h3{
     font-size:22px;
-    margin-bottom:20px;
+    margin-bottom:15px;
     color:#d4af37;
 }
 .card button{
@@ -134,21 +143,25 @@ header{
 
 <div class="produtos">
     <div class="card">
+        <img src="./imagem/nutella.jpg" alt="Nutella">
         <h3>🍫 Nutella</h3>
         <button onclick="addItem('Nutella Pequeno',5)">Pequeno R$5</button>
         <button onclick="addItem('Nutella Grande',7)">Grande R$7</button>
     </div>
     <div class="card">
+        <img src="./imagem/brigadeiro.jpg" alt="Brigadeiro">
         <h3>🍮 Brigadeiro</h3>
         <button onclick="addItem('Brigadeiro Pequeno',5)">Pequeno R$5</button>
         <button onclick="addItem('Brigadeiro Grande',7)">Grande R$7</button>
     </div>
     <div class="card">
+        <img src="./imagem/bolo_chocolate.jpg" alt="Bolo de Chocolate">
         <h3>🍰 Bolo de Chocolate</h3>
         <button onclick="addItem('Bolo Pequeno',10)">Pequeno R$10</button>
         <button onclick="addItem('Bolo Grande',15)">Grande R$15</button>
     </div>
     <div class="card">
+        <img src="./imagem/cupcake.jpg" alt="Cupcake">
         <h3>🧁 Cupcake</h3>
         <button onclick="addItem('Cupcake Pequeno',6)">Pequeno R$6</button>
         <button onclick="addItem('Cupcake Grande',9)">Grande R$9</button>
@@ -186,3 +199,6 @@ atualizarContador();
 
 </body>
 </html>
+
+    
+
